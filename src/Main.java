@@ -18,7 +18,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-//		
+//
+//		***********
 //		Figure task
 
 		Figure[] figure = new Figure[] { new Rectangle(2, 2), new Circle(5), new IsoscelesTriangle(2, 4),
@@ -29,7 +30,8 @@ public class Main {
 			System.out.println();
 		}
 
-//		
+//
+//		*************
 //		Position task
 
 		new Director().printPosition();
@@ -39,9 +41,8 @@ public class Main {
 		boss.printPosition();
 
 //		
+//		****************************
 //		Accounting of documents task
-
-//		Document[] reg = new Document[10];
 
 		Document delivContr = new DeliveryContract(345, "SilverSword", 750);
 		Document emplContr = new EmployeeContract(771, "Geralt of Rivia", "5 years");
@@ -50,30 +51,39 @@ public class Main {
 		Register.addDocument(0, delivContr);
 		Register.addDocument(1, emplContr);
 		Register.addDocument(2, finacialInvoice);
-		
-		delivContr.print();
-		
-		Register.printInfo();
-		
-		
 
-//		
+		delivContr.print();
+
+		Register.printInfo();
+
+//
+//		**************
 //		Recursion task
 
 //		System.out.println(Recursion.outputNubers(10,20));
 		Recursion.outputNubers(5, 20);
 
+		System.out.println();
+//		
+//		*************
+//		Students task
+
+		Student bob = new Student();
+		bob.averageMark=4;
+		Student bill = new Aspirant();
+		bill.averageMark=4;
+		Student bob1 = new Student();
+		bob1.averageMark=5;
+		Student bill1 = new Aspirant();
+		bill1.averageMark=5;
+		Student bob2 = new Student();
+		bob2.averageMark=3;
+		Student bill2 = new Aspirant();
+		bill2.averageMark=5;
+		Student[] studList = new Student[] { bob, bill, bob1, bill1, bob2, bill2 };
+		for (int i = 0; i < studList.length; i++) {
+			System.out.println(studList[i].getScholarship());
+		}
+		
 	}
-
-//	4. Рекурсивный вывод чисел
-//
-//	Даны два целых числа A и В. Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае. Использовать рекурсию.
-//	5. Наследование Student, Aspirant
-//
-//	    Создайте пример наследования, реализуйте класс Student и класс Aspirant, аспирант отличается от студента наличием некой научной работы.
-//	    Класс Student содержит переменные: String firstName, lastName, group. А также, double averageMark, содержащую среднюю оценку.
-//	    Создать переменную типа Student, которая ссылается на объект типа Aspirant.
-//	    Создать метод getScholarship() для класса Student, который возвращает сумму стипендии. Если средняя оценка студента равна 5, то сумма 100 грн, иначе 80. Переопределить этот метод в классе Aspirant.  Если средняя оценка аспиранта равна 5, то сумма 200 грн, иначе 180.
-//	    Создать массив типа Student, содержащий объекты класса Student и Aspirant. Вызвать метод getScholarship() для каждого элемента массива. Смотрите решение задачи в видео 1, видео 2.
-
 }
